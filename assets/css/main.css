@@ -1,0 +1,13 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.jumbotron{
+       text-align: center; 
+       background: rgb(8, 79, 92);
+       color: whitesmoke;
+       padding: 1%;
+}
+
+#addTrain{
+    margin-top: 3%;
+}

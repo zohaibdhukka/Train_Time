@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron container">
+      <h1 class="display-3">Anytime is Train Time</h1>
+      <p class="lead">Welcome to sheldon cooper Train Adventure</p>
+      <p>Choooooo chooooooo</p>
+      
+        </div>
+        <div class="row">
+                <div class="col-md-12">
+                  
+                  
+                
+                    <div id="main-container" class="container card-body">    
+                        <div class="card border-dark mb-1">
+                          
+                          <div class="card-header">
+                            <i class="far fa-calendar-alt"></i>
+                          
+                            Current Train Schedule
+                          
+                        </div>
+                        <div class="card-body">
+                          <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Train Name</th>
+                                            <th scope="col">Destination</th>
+                                            <th scope="col">Frequency</th>
+                                            <th scope="col">Next Arrival</th>
+                                            <th scope="col">Minutes Away</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="trainName"></td>
+                                            <td class="destination"></td>
+                                            <td class="frequency"></td>
+                                            <td class="nextArrival"></td>
+                                            <td class="minAway"></td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                      </table>
+                          
+                        </div>
+                      </div>
+                      
+                    </div>
+            
+                  </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            
+            
+            
+            <div id="main-container" class="container card-body">    
+              <div class="card border-dark mb-1">
+                
+                <div class="card-header">
+                  <i class="far fa-calendar-alt"></i>
+                  
+                  Add Train
+                  
+                </div>
+                <div class="card-body">
+                  
+                  <form>
+                    <div class="form-group">
+                      <label for="trainName">Train Name</label>
+                                <input type="text" class="form-control" id="trainName" placeholder="Enter Train Name"> 
+                              </div>
+                          
+                              <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="number" class="form-control" id="destination" placeholder="Enter Destination">
+                            </div>
+        
+                            <div class="form-group">
+                              <label for="firstTrainTime">First Train Time (HH:mm -military time)</label>
+                                <input type="number" class="form-control" id="firstTrainTime" placeholder="Enter Train Time">
+                            </div>
+                            
+                            <div class="form-group">
+                                    <label for="frequency">Frequency (min)</label>
+                                    <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency">
+                                  </div>
+                            <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+                            
+                          </form>
+                        </div>
+                      </div>
+                      
+                    </div>
+            
+                  </div>
+                </div>
+                <script src="./assets/javascript/main.js"></script>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
