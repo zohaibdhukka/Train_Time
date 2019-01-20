@@ -33,11 +33,17 @@ var config = {
             
            var trainName = $("#trainName").val().trim();
            var destination = $("#destination").val().trim();
-           var nextTrainTime;
-           var tFrequency;
-           var tMinutesTillTrain; 
-              
+           var firstTrainTime = $("#firstTrainTime").val().trim();
+        //    var firstTt = moment(firstTrainTime).format("hh:mm a");
+           var frequency = $("#frequency").val().trim();
 
+           var timeToMins = moment(firstTrainTime, "HH:mm").subtract(1, "years");
+           var timeDifferent = moment().diff(moment(timeToMins), "minutes");
+           var remainder = timeDifferent % frequency;
+           var minTillTrain = frequency - remainder;
+           var nextTrain = moment().add(minTillTrain, "minutes");
+           var nextTrainTime = moment(nextTrain).format("hh:mm a");       
+                
             if(trainName === ""){
 
                 alert("Please Enter Train Name")
@@ -56,13 +62,13 @@ var config = {
                 alert("Please Enter Train Time")
                 alert("Please Enter Frequency")
             }
-            else if (tFrequency === ""){
+            else if (frequency === ""){
                 alert("Please Enter Frequency")
 
             }
             else{
 
-            var addRow = "<tr><td>"+ trainName +"</td><td>" + destination + "</td><td>" + nextTrainTime + "</td><td>" + tFrequency + "</td><td>" + tMinutesTillTrain +"</td></tr>"
+            var addRow = "<tr><td>"+ trainName +"</td><td>" + destination + "</td><td>" + firstTrainTime + "</td><td>" + nextTrainTime + "</td><td>" + frequency + "</td><td>" + minTillTrain +"</td></tr>"
         
                 $("table tbody").append(addRow);
             }
@@ -71,7 +77,7 @@ var config = {
                 tName: trainName,
                 dest: destination,
                 nextTT: nextTrainTime,
-                freq: tFrequency,
-                maway: tMinutesTillTrain
+                freq: frequency,
+                maway: minTillTrain
             })
     })
