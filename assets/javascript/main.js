@@ -47,20 +47,15 @@ var config = {
             if(trainName === ""){
 
                 alert("Please Enter Train Name")
-                alert("Please Enter Destination")
-                alert("Please Enter Train Time")
-                alert("Please Enter Frequency")
-            
+                
             }
             else if (destination === ""){
                 alert("Please Enter Destination")
-                alert("Please Enter Train Time")
-                alert("Please Enter Frequency")
+                
             
             }
             else if (firstTrainTime === ""){
                 alert("Please Enter Train Time")
-                alert("Please Enter Frequency")
             }
             else if (frequency === ""){
                 alert("Please Enter Frequency")
@@ -73,7 +68,7 @@ var config = {
                 $("table tbody").append(addRow);
             }
         
-            database.ref("/traintime").set({
+            database.push("/traintime").set({
                 tName: trainName,
                 dest: destination,
                 nextTT: nextTrainTime,
